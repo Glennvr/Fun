@@ -1,0 +1,311 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* custom css */
+
+header {
+	height: 75px;
+	width: 100%;
+	background: #524246;
+	overflow: hidden;
+}
+
+@-webkit-keyframes spotlight {
+	0% {color:#FF8363;}
+	25% {color:#FCB438;}
+	50% {color:#FF8363;}
+	100% {color:#FCB438;}
+}
+
+@-webkit-keyframes goleft {
+	0% { -webkit-transform: translateX(0px);}
+	100% {-webkit-transform: translateX(-750px);}
+}
+
+@-webkit-keyframes appear {
+	0% { opacity: 0;}
+	100% { opacity: 1;}
+}
+
+
+#logo {
+	line-height: 75px;
+	float: left;
+	margin-left: 30px;
+	font-family: 'Raleway', sans-serif;
+	font-size: 3em;
+	font-weight: 700;
+	color: #FF8363;
+	opacity: 0;
+	-webkit-transition: -webkit-transform 0.5s ease-out;
+	-webkit-transform: rotate(0deg);
+	-webkit-animation: appear 1s;
+	-webkit-animation-fill-mode: forwards;
+	-webkit-animation-delay: 4s;
+	-webkit-animation-itteration: 1;
+}
+
+header:hover a {
+
+}
+
+
+header:hover #logo {
+	-webkit-animation: spotlight 0.5s infinite;
+	-webkit-animation-fill-mode: forwards;
+	-webkit-transform: rotate(-720deg);
+	opacity: 1;
+	
+}
+
+header nav {
+	float: right;
+	line-height: 75px;
+	margin-right: -200px;
+	-webkit-animation: goleft 0.3s;
+	-webkit-animation-fill-mode: forwards;
+	-webkit-animation-delay: 4s;
+}
+
+header nav ul {
+	display: inline;
+}
+
+header nav ul li {
+	display: inline;
+	margin-left: 20px;
+}
+
+header nav ul li a {
+	text-decoration: none;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 500;
+	color: #FF8363;
+	font-size: 14px;
+
+}
+
+header nav ul li a:hover {
+	-webkit-transform: rotate(-360deg);
+	-webkit-animation: spotlight 1s infinite !important;
+}
+
+header nav ul li a:active {
+	text-decoration: line-through;
+}
+
+.content {
+	width: 100%;
+	overflow: hidden;
+}
+
+#lettertje {
+	color: red;
+	text-decoration: none;
+
+}
+
+@-webkit-keyframes backleft {
+	0% {-webkit-transform: translateX(0px);}
+	100% {-webkit-transform: translateX(-1450px);}
+}
+
+.cage {
+	height: 300px;
+	width: 200%;
+	padding: 100px;
+	-webkit-perspective: 900px;
+	background: #ff8363; /* Old browsers */
+	background: -moz-linear-gradient(left,  #ff8363 0%, #ff8363 51%, #fcb438 51%, #fcb438 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#ff8363), color-stop(51%,#ff8363), color-stop(51%,#fcb438), color-stop(100%,#fcb438)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left,  #ff8363 0%,#ff8363 51%,#fcb438 51%,#fcb438 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left,  #ff8363 0%,#ff8363 51%,#fcb438 51%,#fcb438 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(left,  #ff8363 0%,#ff8363 51%,#fcb438 51%,#fcb438 100%); /* IE10+ */
+	background: linear-gradient(to right,  #ff8363 0%,#ff8363 51%,#fcb438 51%,#fcb438 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff8363', endColorstr='#fcb438',GradientType=1 ); /* IE6-9 */
+	-webkit-animation: backleft 0.3s;
+	-webkit-animation-fill-mode: forwards;
+	-webkit-animation-delay: 4s;
+}
+
+#blokkie {
+	text-align: center;
+	width:  220px;
+	height: 220px;
+	border: 30px solid white;
+	-webkit-transition: all 1s ease-in;
+	opacity: 0;
+	margin-left: 400px;	
+	margin-top: 50px;
+	-webkit-animation: turnaround 1s;
+	-webkit-animation-delay: 2s;
+	-webkit-animation-fill-mode: both;
+	float: left;
+}
+
+#blokkie p {
+	margin: 20px;
+	font-size: 10em;
+	font-family: 'Grand Hotel', cursive;
+}
+
+#welcome{
+	float: left;
+	margin-left: 1750px;
+	margin-top: -200px;
+	font-size: 9em;
+	font-family: 'Grand Hotel';
+}
+
+@-webkit-keyframes backright {
+	0% {-webkit-transform: translateX(0px);}
+	100% {-webkit-transform: translateX(1450px);}
+}
+
+#kooi {
+	background-image: url('../images/bg.png');
+	width: 150px;
+	height: 150px;
+	margin-left: 1750px;
+	margin-top: 300px;
+	-webkit-perspective: 100px;
+	padding: 0;
+	background: red;
+}
+
+#rooster1 {
+	height: 30px;
+	width: 150px;
+	background: black;
+		-webkit-transition: all 0.5s linear;
+	
+}
+
+#kooi:hover #rooster1{
+	-webkit-transform: rotateX(90deg);
+}
+
+#rooster2 {
+	height: 30px;
+	width: 150px;
+	background: black;
+		-webkit-transition: all 0.5s linear;
+}
+
+#kooi:hover #rooster2 {
+	-webkit-transform: rotateX(90deg);
+}
+
+#rooster3 {
+	height: 30px;
+	width: 150px;
+	background: black;
+		-webkit-transition: all 0.5s linear;
+}
+
+#kooi:hover #rooster3 {
+	-webkit-transform: rotateX(90deg);
+}
+
+#rooster4 {
+	height: 30px;
+	width: 150px;
+	background: black;
+		-webkit-transition: all 0.5s linear;
+}
+
+#kooi:hover #rooster4 {
+	-webkit-transform: rotateX(90deg);
+}
+
+#rooster5 {
+	height: 30px;
+	width: 150px;
+	background: black;
+		-webkit-transition: all 0.5s linear;
+}
+
+#kooi:hover #rooster5 {
+	-webkit-transform: rotateX(90deg);
+}
+
+.cage2 {
+	height: 300px;
+	width: 200%;
+	padding: 100px;
+	background: #524246;
+	-webkit-perspective: 900px;
+	background: #ff8363; /* Old browsers */
+	background: -moz-linear-gradient(left,  #ff8363 0%, #ff8363 51%, #524246 51%, #524246 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#ff8363), color-stop(51%,#ff8363), color-stop(51%,#524246), color-stop(100%,#524246)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left,  #ff8363 0%,#ff8363 51%,#524246 51%,#524246 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left,  #ff8363 0%,#ff8363 51%,#524246 51%,#524246 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(left,  #ff8363 0%,#ff8363 51%,#524246 51%,#524246 100%); /* IE10+ */
+	background: linear-gradient(to right,  #ff8363 0%,#ff8363 51%,#524246 51%,#524246 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff8363', endColorstr='#524246',GradientType=1 ); /* IE6-9 */
+	-webkit-animation: backright 0.3s;
+	-webkit-animation-fill-mode: forwards;
+	-webkit-animation-delay: 4s;
+}
+
+@-webkit-keyframes turnaround {
+	0%{ 
+		-webkit-transform: rotate(0deg);
+		opacity: 0;	
+	}
+	100% {
+		-webkit-transform: rotate(720deg);
+		opacity: 1;
+	}
+}
+
+
+
+
+
